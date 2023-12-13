@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../context/authContext'
-import { BASE_URL } from '../utils/config'
+// import { BASE_URL } from '../utils/config'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
@@ -84,10 +84,14 @@ export default () => {
     const headerRef=useRef(null);
     const navigate=useNavigate();
     const {user,dispatch} = useContext(AuthContext)
+    console.log(user);
     // console.log(user,'78')
 
     const logout = ()=>{
         dispatch({type:'LOGOUT'})
+        
+localStorage.removeItem('user');
+
         navigate('/')
     }
 
@@ -206,7 +210,7 @@ export default () => {
                                 })
                             }
                             {user?<>
-                            <h5 className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">{user.username}</h5>
+                            <h5 className="mb-0">{user.username}</h5>
                             <div className="btn btn-dark" onClick={logout}>Logout</div>
                             </>:
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>

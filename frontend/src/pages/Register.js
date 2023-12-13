@@ -14,9 +14,9 @@ import { Navigate,useNavigate } from 'react-router-dom'
 function Register() {
   const navigate=useNavigate()
   const [credentials,setCredentials]=useState({
-    username:undefined,
-    email:undefined,
-    password:undefined,
+    username:'',
+    email:'',
+    password:'',
   })
 
   const {dispatch} = useContext(AuthContext)
@@ -46,7 +46,7 @@ function Register() {
       if(!res.ok){
         alert('fail')
       }else{
-      // dispatch({type:'REGISTER_SUCCESS'})
+      dispatch({type:'REGISTER_SUCCESS'})
       navigate('/login')}
     }catch(e){
       alert(e.message)

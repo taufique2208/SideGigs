@@ -1,10 +1,17 @@
 import { createContext,useEffect,useReducer } from "react";
 
-const initialState={
-    user:localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')):null,
-    loading:false,
-    error:null,
-}
+// const initialState={
+//     user:localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')):null,
+//     loading:false,
+//     error:null,
+// }
+// localStorage.removeItem('user');
+
+const initialState = {
+    user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
+    loading: false,
+    error: null,
+  };
 
 export const AuthContext = createContext(initialState)
 

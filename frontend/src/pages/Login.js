@@ -8,14 +8,14 @@ import { Link ,useNavigate} from 'react-router-dom'
 // import loginImg from'../assets/images/login.png'
 // import userIcon from'../assets/images/user.png'
 import { AuthContext } from '../context/authContext'
-import { AuthContextProvider } from '../context/authContext';
+// import { AuthContextProvider } from '../context/authContext';
 import { BASE_URL } from '../utils/config'
 
 function Login() {
 
   const [credentials,setCredentials]=useState({
-    email:undefined,
-    password:undefined,
+    email:'',
+    password:'',
   })
 
   const {dispatch} = useContext(AuthContext)
@@ -56,8 +56,8 @@ function Login() {
       <span>sign up to continue</span>
     </div>
     <div className='input-wrapper'>
-    <input className="input-tem" name="email" placeholder="Email" type="email" />
-    <input className="input-tem" name="password" placeholder="Password" type="password" /></div>
+    <input className="input" name="email" placeholder="Email" id='email' type="email" onChange={handleChange}/>
+    <input className="input" name="password" placeholder="Password" id='password' type="password" onChange={handleChange}/></div>
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>
