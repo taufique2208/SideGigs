@@ -7,6 +7,8 @@ import Register from '../pages/Register'
 import ResumeBuilder from '../pages/ResumeBuilder'
 import AskAi from '../pages/AskAi'
 import Courses from '../pages/Courses'
+import NewJob from '../pages/NewJob'
+import Projects from '../pages/Projects'
 
 
 const Routers = () => {
@@ -19,6 +21,8 @@ const Routers = () => {
         <Route path='/resume-builder' element={<ResumeBuilder/>}></Route>
         <Route path='/ask-ai' element={<AskAi/>}></Route>
         <Route path='/courses' element={<Courses/>}></Route>
+        <Route path='/newjob' element={<NewJob/>}></Route>
+        <Route path='/projects' element={<Projects/>}></Route>
         
     </Routes>
   )

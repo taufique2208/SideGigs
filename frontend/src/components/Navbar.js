@@ -100,7 +100,7 @@ localStorage.removeItem('user');
 
     // Replace javascript:void(0) paths with your paths
     const navigation = [
-        { title: "Projects", path: '/', isDrapdown: true, navs: dropdownNavs },
+        { title: "Projects", path: '/projects', isDrapdown: false, navs: dropdownNavs },
         { title: "Courses", path: '/courses', isDrapdown: false },
         { title: "Companies", path: '/', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },
@@ -210,7 +210,10 @@ localStorage.removeItem('user');
                                 })
                             }
                             {user?<>
-                            <h5 className="mb-0">{user.username}</h5>
+                                <NavLink to='/newjob' className="block py-3 px-4 font-medium text-center text-white ">
+                                    <button class="comic-button">Post a Project</button>
+                                    </NavLink>
+                            <h5 className="">{user.username}</h5>
                             <div className="btn btn-dark" onClick={logout}>Logout</div>
                             </>:
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>

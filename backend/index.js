@@ -6,7 +6,8 @@ import cookieParser from 'cookie-parser'
 // import tourRoute from './routes/tour.js'
 import userRoute from './routes/users.js'
 import authRoute from './routes/auth.js'
-// import reviewRoute from './routes/reviews.js'
+import jobRoute from './routes/jobs.js'
+import searchProjectsRoute from './routes/searchProjects.js'
 // import bookingRoute from './routes/bookings.js'
 
 dotenv.config()
@@ -42,7 +43,8 @@ app.use(cookieParser())
 // app.use('/api/v1/tour',tourRoute)
 app.use('/api/v1/user',userRoute)
 app.use('/api/v1/auth',authRoute)
-// app.use('/api/v1/review',reviewRoute)
+app.use('/api/v1/newjob',jobRoute)
+app.use('/api/v1/projects',searchProjectsRoute)
 // app.use('/api/v1/booking',bookingRoute)
 // app.use('/api/v1/search')
 

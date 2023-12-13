@@ -1,11 +1,11 @@
 import React from 'react'
 import './CardBox.css'
 
-function CardBox() {
+function CardBox(props) {
   return (
    <>
    
-<div class="card"></div>
+<div class="card" >{props.title}</div>
    </>
   )
 }
