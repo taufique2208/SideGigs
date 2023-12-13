@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'
 import {MainContainer, ChatContainer, MessageList,Message,MessageInput,TypingIndicator} from '@chatscope/chat-ui-kit-react'
 // import { Directions } from '@mui/icons-material'
+<<<<<<< HEAD
 const API_KEY= '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'
+=======
+const API_KEY='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';
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
 
 
 

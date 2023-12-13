@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react'
+import './CardBox.css'
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
 
 function CardBox({ title, description, price, buttonText, buttonLink }) {
   return (
+<<<<<<< HEAD
     <>
       <div className="flex flex-col border-2 border-black overflow-hidden p-8 rounded-xl shadow-large bg-yellow-200 w-80">
         <div className="px-6 py-8 sm:p-10 sm:pb-6">
@@ -31,6 +37,13 @@ function CardBox({ title, description, price, buttonText, buttonLink }) {
       </div>
     </>
   );
+=======
+   <>
+   
+<div class="card"></div>
+   </>
+  )
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
 }
 
 export default CardBox;

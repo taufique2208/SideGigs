@@ -1,7 +1,59 @@
 import React from 'react';
 import './Register.css';
+// import React from 'react'
+import { useState,useContext } from 'react'
+// import { Link } from 'react-router-dom'
+// import { Container,Row,Col,Form,FormGroup,Button } from 'reactstrap'
+// import './Login.css'
+// import registerImg from'../assets/images/register.png'
+// import userIcon from'../assets/images/user.png'
+import { AuthContext } from '../context/authContext'
+import { BASE_URL } from '../utils/config'
+import { Navigate,useNavigate } from 'react-router-dom'
 
 function Register() {
+  const navigate=useNavigate()
+  const [credentials,setCredentials]=useState({
+    username:'',
+    email:'',
+    password:'',
+  })
+
+  const {dispatch} = useContext(AuthContext)
+  
+
+  const handleChange=e=>{
+    setCredentials(prev=>({...prev,[e.target.id]:e.target.value}))
+    console.log(credentials)
+  }
+
+  const handleClick=async e=>{
+    console.log(credentials)
+
+    e.preventDefault();
+    try{
+      const res= await fetch(`${BASE_URL}/auth/register`,{
+        method:"post",
+        headers:{
+          "content-type":"application/json"
+        },
+        body: JSON.stringify(credentials)
+      })
+      console.log(res)
+
+      const result = await res.json()
+
+      if(!res.ok){
+        alert('fail')
+      }else{
+      dispatch({type:'REGISTER_SUCCESS'})
+      navigate('/login')}
+    }catch(e){
+      alert(e.message)
+    }
+  }
+
+
   return (
     
     <div className='form-wrapper'><form className="form">
@@ -10,13 +62,19 @@ function Register() {
       <span>Register to continue</span>
     </div>
     <div className='input-wrapper'>
-    <input className="input" name="email" placeholder="Email" type="email" />
-    <input className="input" name="password" placeholder="Phone Number" type="text" />
-    <input className="input" name="password" placeholder="Password" type="password" />
-    <input className="input" name="confirm-password" placeholder="Confirm Password" type="password" />
+    <input className="input" name="email"  id='username' placeholder="User Name" type="email" onChange={handleChange} />
+    <input className="input" name="email"  id='email' placeholder="Email" type="email"  onChange={handleChange} />
+    {/* <input className="input" name="password" id='password'  placeholder="Phone Number" type="text" /> */}
+    <input className="input" name="password" placeholder="Password" id='password' type="password" onChange={handleChange} />
+    {/* <input className="input" name="confirm-password" placeholder="Confirm Password" type="password" /> */}
     </div>
+<<<<<<< HEAD
     <button className="button-confirm bg-blue-400">Submit</button>
      
+=======
+    <button className="button-confirm bg-blue-400" onClick={handleClick}>Let's go →</button>
+    
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>

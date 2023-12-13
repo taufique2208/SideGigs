@@ -1,16 +1,68 @@
 import React from 'react';
 import './Login.css';
+// import React from 'react'
+import { useState,useContext } from 'react'
+import { Link ,useNavigate} from 'react-router-dom'
+// import { Container,Row,Col,Form,FormGroup,Button } from 'reactstrap'
+// import './Login.css'
+// import loginImg from'../assets/images/login.png'
+// import userIcon from'../assets/images/user.png'
+import { AuthContext } from '../context/authContext'
+// import { AuthContextProvider } from '../context/authContext';
+import { BASE_URL } from '../utils/config'
 
 function Login() {
+
+  const [credentials,setCredentials]=useState({
+    email:'',
+    password:'',
+  })
+
+  const {dispatch} = useContext(AuthContext)
+  const navigate=useNavigate()
+  const handleChange=e=>{
+    setCredentials(prev=>({...prev,[e.target.id]:e.target.value}))
+  }
+
+  const handleClick= async e=>{
+    e.preventDefault();
+    dispatch({type:'LOGIN_START'})
+    try{
+      const res=await fetch(`${BASE_URL}/auth/login`,{
+        method:'post',
+        headers:{
+          "content-type":'application/json',
+        },
+        credentials:'include',
+        body : JSON.stringify(credentials)
+      })
+      console.log(res)
+      const result=await res.json()
+
+      if(!res.ok){alert(result.message)}
+      console.log(result.data)
+      dispatch({type: "LOGIN_SUCCESS" ,payload : result.data})
+      console.log(result.data)
+      navigate('/')
+    }catch(e){
+      dispatch({type:"LOGIN_FAILURE",payload:e.message})
+    }
+  }
   return (
+    // <AuthContextProvider>
     <div className='form-wrapper'><form className="form">
     <div className="title-name">
       Welcome,<br />
       <span>sign up to continue</span>
     </div>
     <div className='input-wrapper'>
+<<<<<<< HEAD
     <input className="input-tem" name="email" placeholder="Email" type="email" />
     <input className="input-tem" name="password" placeholder="Password" type="password" /></div>
+=======
+    <input className="input" name="email" placeholder="Email" id='email' type="email" onChange={handleChange}/>
+    <input className="input" name="password" placeholder="Password" id='password' type="password" onChange={handleChange}/></div>
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>
@@ -27,9 +79,14 @@ function Login() {
         {/* </svg> */}
       {/* </div> */}
     </div>
+<<<<<<< HEAD
     <button className="button-confir">Submit</button>
+=======
+    <button className="button-confirm" onClick={handleClick}>Let's go →</button>
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
   </form>
   </div>
+  // </AuthContextProvider>
   );
 }
 
