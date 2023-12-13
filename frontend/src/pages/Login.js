@@ -4,19 +4,19 @@ import './Login.css';
 function Login() {
   return (
     <div className='form-wrapper'><form className="form">
-    <div className="title">
+    <div className="title-name">
       Welcome,<br />
       <span>sign up to continue</span>
     </div>
     <div className='input-wrapper'>
-    <input className="input" name="email" placeholder="Email" type="email" />
-    <input className="input" name="password" placeholder="Password" type="password" /></div>
+    <input className="input-tem" name="email" placeholder="Email" type="email" />
+    <input className="input-tem" name="password" placeholder="Password" type="password" /></div>
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>
       <div className='input-wrapper'>
       <div className="button-log">
-        <button>
+        <button className='img-btn'>
           <img src={require('../assets/google.png')}></img>
         </button>
       </div>
@@ -27,7 +27,7 @@ function Login() {
         {/* </svg> */}
       {/* </div> */}
     </div>
-    <button className="button-confirm">Let's go →</button>
+    <button className="button-confir">Submit</button>
   </form>
   </div>
   );
