@@ -3,8 +3,9 @@ import './Register.css';
 
 function Register() {
   return (
+    
     <div className='form-wrapper'><form className="form">
-    <div className="title">
+    <div className="title-name">
       Welcome,<br />
       <span>Register to continue</span>
     </div>
@@ -14,8 +15,8 @@ function Register() {
     <input className="input" name="password" placeholder="Password" type="password" />
     <input className="input" name="confirm-password" placeholder="Confirm Password" type="password" />
     </div>
-    <button className="button-confirm bg-blue-400">Let's go →</button>
-    
+    <button className="button-confirm bg-blue-400">Submit</button>
+     
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>

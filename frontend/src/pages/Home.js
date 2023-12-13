@@ -3,7 +3,8 @@ import { Row,Col,Container, Card } from 'reactstrap'
 import './Home.css'
 import SearchBar from '../shared/SearchBar'
 import Serve from '../shared/Serve'
-import CardBox from '../components/CardBox'
+import ValueBox from '../components/ValueBox'
+
 
 
 function Home() {
@@ -22,9 +23,9 @@ function Home() {
             EASY WAY TO GET <br />YOUR <span className="text-primary primary">DREAM JOB</span>
           </h1>
           <a className="comic-button"
-            data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Get started</a>
+            data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Get Freelancers</a>
           <a className="inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 dark:hover:bg-neutral-800 dark:hover:bg-opacity-60"
-            data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Learn more</a>
+            data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Browse Projects</a>
             <div className='search-wrapper'><SearchBar></SearchBar></div>
         </div>
         <div className='brand-bubbles' style={{top:'100px',right:'20px'}}><img src={require('../assets/google.png')} alt="" /></div>
@@ -39,7 +40,7 @@ function Home() {
   </div>
   {/* <!-- Jumbotron --> */}
 </section>
-<CardBox></CardBox>
+<ValueBox/>
 <section>
 </section>
     </>
