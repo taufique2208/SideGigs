@@ -3,13 +3,10 @@ import { Row,Col,Container, Card } from 'reactstrap'
 import './Home.css'
 import SearchBar from '../shared/SearchBar'
 import Serve from '../shared/Serve'
-<<<<<<< HEAD
 import ValueBox from '../components/ValueBox'
 
-=======
 import CardBox from '../components/CardBox'
 import ChatIcon from '../components/ChatIcon'
->>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
 
 
 function Home() {

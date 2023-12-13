@@ -68,13 +68,8 @@ function Register() {
     <input className="input" name="password" placeholder="Password" id='password' type="password" onChange={handleChange} />
     {/* <input className="input" name="confirm-password" placeholder="Confirm Password" type="password" /> */}
     </div>
-<<<<<<< HEAD
-    <button className="button-confirm bg-blue-400">Submit</button>
-     
-=======
     <button className="button-confirm bg-blue-400" onClick={handleClick}>Let's go →</button>
     
->>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>
