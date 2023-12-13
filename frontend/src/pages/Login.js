@@ -56,8 +56,13 @@ function Login() {
       <span>sign up to continue</span>
     </div>
     <div className='input-wrapper'>
+<<<<<<< HEAD
+    <input className="input-tem" name="email" placeholder="Email" type="email" />
+    <input className="input-tem" name="password" placeholder="Password" type="password" /></div>
+=======
     <input className="input" name="email" placeholder="Email" id='email' type="email" onChange={handleChange}/>
     <input className="input" name="password" placeholder="Password" id='password' type="password" onChange={handleChange}/></div>
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
     <div className="login-with">
       {/* <div className="button-log"><b>t</b></div> */}
       <div className='title'>or</div><br></br>
@@ -74,7 +79,11 @@ function Login() {
         {/* </svg> */}
       {/* </div> */}
     </div>
+<<<<<<< HEAD
+    <button className="button-confir">Submit</button>
+=======
     <button className="button-confirm" onClick={handleClick}>Let's go →</button>
+>>>>>>> c7ce2b2b7cad58573e6d168a530291e474fbe5bb
   </form>
   </div>
   // </AuthContextProvider>
