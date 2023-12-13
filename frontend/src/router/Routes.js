@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom'
 import Register from '../pages/Register'
 import ResumeBuilder from '../pages/ResumeBuilder'
 import AskAi from '../pages/AskAi'
+import Courses from '../pages/Courses'
 
 
 const Routers = () => {
@@ -17,6 +18,7 @@ const Routers = () => {
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/resume-builder' element={<ResumeBuilder/>}></Route>
         <Route path='/ask-ai' element={<AskAi/>}></Route>
+        <Route path='/courses' element={<Courses/>}></Route>
         
     </Routes>
   )

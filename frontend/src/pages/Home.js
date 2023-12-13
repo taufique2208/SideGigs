@@ -4,11 +4,13 @@ import './Home.css'
 import SearchBar from '../shared/SearchBar'
 import Serve from '../shared/Serve'
 import CardBox from '../components/CardBox'
+import ChatIcon from '../components/ChatIcon'
 
 
 function Home() {
   return (
     <>
+    <ChatIcon/>
       {/* <!-- Section: Design Block --> */}
 <section className="mb-40">
 

@@ -1,0 +1,117 @@
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 24rem;
+    height:500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: hsl(0, 40%, 98%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .chat-window::-webkit-scrollbar{
+    display:none;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: lightblue;
+    color: white;
+    font-size:16px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .chat-content {
+    padding: 20px;
+    height:100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scroll-behavior: smooth;
+  }
+  
+  .chat-content::-webkit-scrollbar {
+    display: none; /* For Webkit-based browsers like Chrome and Safari */
+  }
+  
+  .botmessage{
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    height:auto;
+    display:block;
+    width:auto;
+    min-width:40%;
+    max-width: 80%;
+    padding-right:10px;
+    padding-left:10px;
+    left:0;
+    margin-right:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:0px;
+    background-color: lightblue;
+    color:white;
+    border-radius:10px;
+    padding:10px;
+  }
+  
+  .usermessage{
+    font-weight: bold;
+    font-size:16px;
+    text-align:right;
+    height:auto;
+    display:block;
+    max-width: 70%;
+    padding:10px;
+    padding-right:10px;
+    padding-left:10px;
+    width:auto;
+    min-width:20%;
+    /* border-style:solid;
+    color:black; */
+    right:0;
+    margin-left:auto;
+    margin-right:0px;
+    margin-top:10px;
+    margin-bottom:10px;
+    /* border-width: 2px;
+    border-color: black; */
+    background-color: rgb(92, 92, 92);
+    color:white;
+    border-radius: 10px;
+    cursor:pointer;
+  }
+  
+  @media screen and (max-width:500px){
+    .chat-window{
+      width:300px;
+    }
+  }
+  
+  @media screen and (max-width:400px){
+    .chat-window{
+      width:16rem;
+    }
+    .usermessage{
+      font-size:12px;
+    }
+    .botmessage{
+      font-size:12px;
+    }
+  }
+  

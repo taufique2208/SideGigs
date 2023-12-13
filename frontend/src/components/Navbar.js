@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
-
+import { AuthContext } from '../context/authContext'
+import { BASE_URL } from '../utils/config'
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
 const dropdownNavs = [
     {
         label: "Products", navs: [
@@ -77,6 +81,15 @@ const dropdownNavs = [
 ]
 
 export default () => {
+    const headerRef=useRef(null);
+    const navigate=useNavigate();
+    const {user,dispatch} = useContext(AuthContext)
+    // console.log(user,'78')
+
+    const logout = ()=>{
+        dispatch({type:'LOGOUT'})
+        navigate('/')
+    }
 
     const [state, setState] = useState(false)
     const [drapdownState, setDrapdownState] = useState({ isActive: false, idx: null })
@@ -84,7 +97,7 @@ export default () => {
     // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Projects", path: '/', isDrapdown: true, navs: dropdownNavs },
-        { title: "Courses", path: '/', isDrapdown: false },
+        { title: "Courses", path: '/courses', isDrapdown: false },
         { title: "Companies", path: '/', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },
         { title: "Resume Builder", path: '/resume-builder', isDrapdown: false }
@@ -192,6 +205,10 @@ export default () => {
                                     )
                                 })
                             }
+                            {user?<>
+                            <h5 className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">{user.username}</h5>
+                            <div className="btn btn-dark" onClick={logout}>Logout</div>
+                            </>:
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
                                 <li>
                                     <NavLink to='/login' className="block py-3 text-center  border rounded-lg md:border-none">
@@ -204,6 +221,8 @@ export default () => {
                                     </NavLink>
                                 </li>
                             </div>
+
+}
                         </ul>
                     </div>
                 </div>
