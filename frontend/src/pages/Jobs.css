@@ -1,0 +1,15 @@
+.job-page {
+    display: flex;
+  }
+  
+  .categories-list {
+    width: 25%;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .jobs-list {
+    flex: 1;
+    padding: 20px;
+  }
+  
