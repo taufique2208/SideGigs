@@ -6,6 +6,7 @@ import { AuthContext } from '../context/authContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 const dropdownNavs = [
     {
         label: "Products", navs: [
@@ -186,8 +187,9 @@ localStorage.removeItem('user');
                                     <button class="comic-button">Post a Project</button>
                                     </NavLink>
                             <h5 className="block font-medium text-center py-3 px-4">{user.username}</h5>
-                            <div className="btn btn-dark" onClick={logout}>Logout</div>
-                            <NavLink to='/dashboard'><div className="btn btn-dark">My Projects</div></NavLink>
+                            <NavLink to='/dashboard'><div className="btn btn-dark ">My Projects</div></NavLink>
+                            <NavLink to='/resume-builder'><div className="btn btn-dark ">Portfolio Maker</div></NavLink>
+                            <div className="btn btn-dark" onClick={logout} color='red'><ExitToAppIcon color='red'/></div>
                             </div>
                             </>:
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>

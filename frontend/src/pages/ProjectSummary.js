@@ -68,7 +68,7 @@ function ProjectSummary() {
 
 //   const options={day:'numeric',month:'long',year:'numeric'}
   return (
-    <div>
+    <div style={{width:'95%'}}>
                      <input
           id="proposal"
           // label={questionAnswer.question}

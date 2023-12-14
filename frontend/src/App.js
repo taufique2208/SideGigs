@@ -5,22 +5,22 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // const [loading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
-  const spanStyles = Array.from({ length: 4 }, (_, i) => ({
-    ['--i']: i,
-  }));
+  // const spanStyles = Array.from({ length: 4 }, (_, i) => ({
+  //   ['--i']: i,
+  // }));
   
   return (
 
     <div className="App">
-      {
+      {/* {
         loading?
         <div className="cube div">
         <div className="top div"></div>
@@ -33,13 +33,13 @@ function App() {
           ))}
         </div>
       </div>
-        :
+        : */}
 
       
       
         <Root></Root>
       
-      }
+      {/* } */}
     </div>
   );
 }

@@ -36,10 +36,10 @@ function Applicants() {
     <div>
     {
   filter.map((applicant) => (
-    <div className='large-input' key={applicant._id}>
-      <div>{applicant.userEmail}</div>
-      <div>{applicant.bid}</div>
-      <div>{applicant.proposal}</div>
+    <div className='large-input' key={applicant._id} style={{height:'100px',width:'95%'}}>
+      <div>Email : {applicant.userEmail}</div>
+      <div>Rs : {applicant.bid}</div>
+      <div>Proposal : {applicant.proposal}</div>
     </div>
   ))
 }

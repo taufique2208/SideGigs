@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'
 import {MainContainer, ChatContainer, MessageList,Message,MessageInput,TypingIndicator} from '@chatscope/chat-ui-kit-react'
 // import { Directions } from '@mui/icons-material'
-const API_KEY='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';
+const API_KEY='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';
 
 
 
@@ -80,7 +80,7 @@ async function ProcessMessageToChatGPT(chatMessages){
     <div style={{height:'86vh',width:'100%'}}>
         <MainContainer>
             <ChatContainer>
-                <MessageList typingIndicator={typing? <TypingIndicator content='Epicmploy AI is typing'/>:null}>
+                <MessageList typingIndicator={typing? <TypingIndicator content='SideGigs AI is typing'/>:null}>
                     {messages.map((message,i)=>{
                         return <Message key={i} model={message}></Message>
                     })}

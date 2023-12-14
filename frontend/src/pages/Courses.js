@@ -30,7 +30,7 @@ const YouTubeCourses = () => {
 //   }, [data])
 
   useEffect(() => {
-    const apiKey = 'AIzaSyDcuI21f8HtmAWlAFASLgxv7UCF1ndnyKY';
+    const apiKey = 'AIzaSyCrAj504Gyiu9QtdNSQrdXIWjMSUKr9k_c';
 
     const searchQuery = searchCourse;
     const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchQuery}&type=video&key=${apiKey}`;
@@ -56,7 +56,7 @@ const YouTubeCourses = () => {
       {/* <ul> */}
         {courses.map(course => (
             
-          <div key={course.id.videoId} style={{margin:'30px',display:'grid'}}>
+          <div key={course.id.videoId} style={{margin:'20px',display:'grid'}}>
              <a
               href={`https://www.youtube.com/watch?v=${course.id.videoId}`}
               target="_blank"
