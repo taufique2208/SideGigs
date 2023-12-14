@@ -1,8 +1,10 @@
 
 import React from 'react'
 import './CardBox.css'
+import { NavLink } from 'react-router-dom';
 
-function CardBox({ title, description, price, buttonText, buttonLink }) {
+function CardBox({ title, description, price, buttonText, buttonLink,id }) {
+  console.log(id)
   return (
 
     <>
@@ -23,12 +25,12 @@ function CardBox({ title, description, price, buttonText, buttonLink }) {
         </div>
         <div className="flex flex-col flex-1 justify-between pb-8 px-6 sm:px-8 space-y-6">
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              className="text-black items-center inline-flex bg-white border-2 border-black duration-200 ease-in-out focus:outline-none hover:bg-black hover:shadow-none hover:text-white justify-center rounded-xl shadow-[5px_5px_black] text-center transform transition w-full lg:px-8 lg:py-4 lg:text-4xl px-4 py-2"
-              href={buttonLink}
-            >
+          <NavLink
+  className="text-black items-center inline-flex bg-white border-2 border-black duration-200 ease-in-out focus:outline-none hover:bg-black hover:shadow-none hover:text-white justify-center rounded-xl shadow-[5px_5px_black] text-center transform transition w-full lg:px-8 lg:py-4 lg:text-4xl px-4 py-2"
+  to={`/projects/${id}`}
+>
               {buttonText}
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

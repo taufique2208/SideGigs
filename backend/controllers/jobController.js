@@ -19,23 +19,26 @@ export const createJob = async(req,res)=>{
     }
 }
 
-// export const getSingleJob= async(req,res)=>{
-//     const id=req.params.id;
-//     try{
-//         const tour=await Tour.findById(id).populate('reviews')
-//         res.status(200).json({success:true,message:'Successfully found',data:tour})
+export const getSingleJob= async(req,res)=>{
+    const id=req.params.id;
+    console.log(id)
+    console.log("123")
+    try{
 
-//     }catch(e){
-//         res.status(500).json({success:false,message:'failed to found'})
+        const job=await Job.findById(id).populate('applicants')
+        res.status(200).json({success:true,message:'Successfully found',data:job})
 
-//     }
-// }
+    }catch(e){
+        res.status(500).json({success:false,message:'failed to found'})
+
+    }
+}
 export const getAllJob= async(req,res)=>{
     // const page=parseInt(req.query.page);
     // console.log(page)
    
     try{
-        const jobs=await Job.find()
+        const jobs=await Job.find({}).populate('applicants')
         res.status(200).json({success:true,message:'Successfully found',data:jobs})
 
     }catch(e){

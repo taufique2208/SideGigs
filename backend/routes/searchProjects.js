@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllJob } from '../controllers/jobController.js'
+import { getAllJob,getSingleJob } from '../controllers/jobController.js'
 // import { createTour, deleteTour, getAllTour, getFeaturedTour, getSingleTour, getTourBySearch, getTourCount, updateTour } from '../controllers/tourController.js'
 // import { verifyAdmin } from '../utils/verifyToken.js'
 
@@ -11,7 +11,7 @@ const router = express.Router()
 // 
 // router.delete('/:id',verifyAdmin,deleteTour)
 
-// router.get('/:id',getSingleJob)
+router.get('/:id',getSingleJob)
 
 router.get('/',getAllJob)
 

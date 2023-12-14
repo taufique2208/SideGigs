@@ -9,6 +9,7 @@ import AskAi from '../pages/AskAi'
 import Courses from '../pages/Courses'
 import NewJob from '../pages/NewJob'
 import Projects from '../pages/Projects'
+import ProjectSummary from '../pages/ProjectSummary'
 
 
 const Routers = () => {
@@ -23,6 +24,7 @@ const Routers = () => {
         <Route path='/courses' element={<Courses/>}></Route>
         <Route path='/newjob' element={<NewJob/>}></Route>
         <Route path='/projects' element={<Projects/>}></Route>
+        <Route path='/projects/:id' element={<ProjectSummary/>}></Route>
         
     </Routes>
   )
