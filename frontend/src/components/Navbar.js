@@ -71,7 +71,7 @@ localStorage.removeItem('user');
     // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Projects", path: '/projects', isDrapdown: false, navs: dropdownNavs },
-        { title: "Messages", path: '/', isDrapdown: false },
+        { title: "Messages", path: '/inbox', isDrapdown: false },
         { title: "Courses", path: '/courses', isDrapdown: false },
         // { title: "Companies", path: '/', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },

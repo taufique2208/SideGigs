@@ -12,6 +12,7 @@ import Projects from '../pages/Projects'
 import ProjectSummary from '../pages/ProjectSummary'
 import Dashboard from '../pages/Dashboard'
 import Applicants from '../pages/Applicants'
+import ChatPage from '../pages/Message'
 
 
 const Routers = () => {
@@ -28,6 +29,7 @@ const Routers = () => {
         <Route path='/projects' element={<Projects/>}></Route>
         <Route path='/projects/:id' element={<ProjectSummary/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/inbox' element={<ChatPage/>}></Route>
         <Route path='/dashboard/:jobId' element={<Applicants/>}></Route>
         
     </Routes>
