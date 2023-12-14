@@ -6,8 +6,8 @@ import './Message.css';
 const ChatPage = () => {
   const [newMessage, setNewMessage] = useState('');
   const [messages, setMessages] = useState([
-    { user: 'User1', text: 'Hello there!' },
-    { user: 'User2', text: 'Hi! How are you?' },
+    { user: 'pavan20', text: 'Hello there!' },
+    { user: 'pavan20', text: 'Hi! I am impressed by your portfolio' },
     // Add more sample messages
   ]);
 
