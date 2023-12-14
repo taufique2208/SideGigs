@@ -10,7 +10,7 @@ function AskAi() {
     const [typing,setTyping]=useState(false)
     const[messages,setMessages]=useState([
         {
-            message:'Hello! Welcome to Epicmploy. How may I assist you today?',
+            message:'Hello! Welcome to SideGigs. How may I assist you today?',
             sender:'ChatGPT',
 
         }

@@ -72,7 +72,7 @@ localStorage.removeItem('user');
         { title: "Projects", path: '/projects', isDrapdown: false, navs: dropdownNavs },
         { title: "Messages", path: '/', isDrapdown: false },
         { title: "Courses", path: '/courses', isDrapdown: false },
-        { title: "Companies", path: '/', isDrapdown: false },
+        // { title: "Companies", path: '/', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },
     ]
 
@@ -89,12 +89,14 @@ localStorage.removeItem('user');
                 <div className="items-center gap-x-14 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="/home">
-                            <img
-                                src="https://www.floatui.com/logo.svg"
-                                width={120}
-                                height={50}
-                                alt="Float UI logo"
-                            />
+                        <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> SIDEGIGS</h3>
+    </div>
+  </div>
+</div>
+                            
                         </a>
                         <div className="md:hidden">
                             <button className="text-gray-500 hover:text-gray-800"
@@ -179,11 +181,14 @@ localStorage.removeItem('user');
                                 })
                             }
                             {user?<>
+                                <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
                                 <NavLink to='/newjob' className="block py-3 px-4 font-medium text-center text-white ">
                                     <button class="comic-button">Post a Project</button>
                                     </NavLink>
-                            <h5 className="">{user.username}</h5>
+                            <h5 className="block font-medium text-center py-3 px-4">{user.username}</h5>
                             <div className="btn btn-dark" onClick={logout}>Logout</div>
+                            <NavLink to='/dashboard'><div className="btn btn-dark">My Projects</div></NavLink>
+                            </div>
                             </>:
                             <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
                                 <li>

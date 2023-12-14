@@ -24,6 +24,7 @@ function ProjectSummary() {
   const [credentials,setCredentials]=useState({
     proposal:'',
     jobId:id,
+    job:id,
     applicantId:user._id,
     userEmail:user.email,
     bid:''

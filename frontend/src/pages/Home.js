@@ -13,17 +13,15 @@ function Home() {
   return (
     <>
     <ChatIcon/>
-      {/* <!-- Section: Design Block --> */}
 <section className="mb-40">
 
 
-  {/* <!-- Jumbotron --> */}
   <div className=" px-6 py-12 text-center  md:px-12 lg:text-left">
     <div className="w-100 mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div className="mt-12 lg:mt-0">
           <h1 className="mt-2 mb-16 text-4xl font-bold tracking-tight md:text-5xl xl:text-7xl">
-            EASY WAY TO GET <br />YOUR <span className="text-primary primary">DREAM JOB</span>
+            UNLEASH YOUR POTENTIAL <br />FUEL YOUR <span className="text-primary primary">PASSION</span>
           </h1>
           <a className="comic-button"
             data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Get Freelancers</a>
@@ -41,7 +39,6 @@ function Home() {
       </div>
     </div>
   </div>
-  {/* <!-- Jumbotron --> */}
 </section>
 <ValueBox/>
 <section>

@@ -1,6 +1,46 @@
 
 // import Tour from "../models/Tour.js"
+import Applicant from '../models/Applicant.js'
 import Job from '../models/Job.js'
+
+export const getJobByUseId = async(req,res)=>{
+    const userId = req.params.userId
+    // const newJob = new Job(req.body)
+    // console.log(newJob)
+    console.log('inside job')
+    console.log(userId)
+
+    try{
+        const getJob = await Job.find({hostId:userId}).sort({ timestamp: -1 });
+
+        res.status(200).json({success:true,message:'Job Founded',data:getJob})
+    }catch(e){
+        alert(e)
+        console.log(e)
+        res.status(500).json({success:false,message:'Search Failed'})
+
+    }
+}
+
+export const getJobApplicants= async(req,res)=>{
+    const jobId = req.params.jobId
+    // const newJob = new Job(req.body)
+    // console.log(newJob)
+    // console.log(jobId)
+    
+    try{
+        // const getJob= await Job.findById(jobId);
+        const applicants = await Applicant.find({job:jobId});
+        // console.log('inside job')
+        console.log(applicants.data)
+        res.status(200).json({success:true,message:'Job Founded',data:applicants})
+    }catch(e){
+        alert(e)
+        console.log(e)
+        res.status(500).json({success:false,message:'Search Failed'})
+
+    }
+}
 
 export const createJob = async(req,res)=>{
     // const tourId = req.params.tourId

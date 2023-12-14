@@ -6,6 +6,10 @@ const applicantSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "Job",
     },
+    job:{
+        type: String,
+      required: true,
+    },
     userEmail: {
       type: String,
       required: true,

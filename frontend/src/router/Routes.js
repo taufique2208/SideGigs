@@ -10,6 +10,8 @@ import Courses from '../pages/Courses'
 import NewJob from '../pages/NewJob'
 import Projects from '../pages/Projects'
 import ProjectSummary from '../pages/ProjectSummary'
+import Dashboard from '../pages/Dashboard'
+import Applicants from '../pages/Applicants'
 
 
 const Routers = () => {
@@ -25,6 +27,8 @@ const Routers = () => {
         <Route path='/newjob' element={<NewJob/>}></Route>
         <Route path='/projects' element={<Projects/>}></Route>
         <Route path='/projects/:id' element={<ProjectSummary/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/dashboard/:jobId' element={<Applicants/>}></Route>
         
     </Routes>
   )
