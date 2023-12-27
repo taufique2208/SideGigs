@@ -71,10 +71,11 @@ localStorage.removeItem('user');
     // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Projects", path: '/projects', isDrapdown: false, navs: dropdownNavs },
-        { title: "Messages", path: '/inbox', isDrapdown: false },
-        { title: "Courses", path: '/courses', isDrapdown: false },
-        // { title: "Companies", path: '/', isDrapdown: false },
+        // { title: "Messages", path: '/inbox', isDrapdown: false },
+        { title: "My Projects", path: '/dashboard', isDrapdown: false },
+        { title: "Resume Builder", path: '/dresume-builder', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },
+        { title: "Learn", path: '/courses', isDrapdown: false },
     ]
 
     useEffect(() => {
@@ -144,7 +145,7 @@ localStorage.removeItem('user');
                                                         }
                                                     </button>
                                                 ) : (
-                                                    <a href={item.path} className="block">
+                                                    <a href={item.path} className="">
                                                        <span className='gradient-background'> {item.title}</span>
                                                     </a>
                                                 )
@@ -155,7 +156,7 @@ localStorage.removeItem('user');
                                                         <ul className='max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3'>
                                                             {item?.navs.map((dropdownItem, idx) => (
                                                                 <li key={idx}>
-                                                                    <p className="text-indigo-600 text-sm">{dropdownItem.label}</p>
+                                                                    <p className="">{dropdownItem.label}</p>
                                                                     <ul className='mt-5 space-y-6'>
                                                                         {dropdownItem.navs.map((navItem, idx) => (
                                                                             <li key={idx} className="group">
@@ -164,8 +165,8 @@ localStorage.removeItem('user');
                                                                                         {navItem.icon}
                                                                                     </div>
                                                                                     <div>
-                                                                                        <span className="text-gray-800 duration-200 group-hover:text-indigo-600 text-sm font-medium md:text-base">{navItem.title}</span>
-                                                                                        <p className='text-sm text-gray-600 group-hover:text-gray-800 mt-1'>{navItem.desc}</p>
+                                                                                        <span className="">{navItem.title}</span>
+                                                                                        <p className=''>{navItem.desc}</p>
                                                                                     </div>
                                                                                 </NavLink>
                                                                             </li>
@@ -184,11 +185,11 @@ localStorage.removeItem('user');
                             {user?<>
                                 <div className='flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0'>
                                 <NavLink to='/newjob' className="block py-3 px-4 font-medium text-center text-white ">
-                                    <button class="comic-button">Post a Project</button>
+                                    <button class="comic-button">Post Project</button>
                                     </NavLink>
                             <h5 className="block font-medium text-center py-3 px-4">{user.username}</h5>
-                            <NavLink to='/dashboard'><div className="btn btn-dark ">My Projects</div></NavLink>
-                            <NavLink to='/resume-builder'><div className="btn btn-dark ">Portfolio Maker</div></NavLink>
+                            {/* <NavLink to='/dashboard'><div className="btn btn-dark ">My Projects</div></NavLink>
+                            <NavLink to='/resume-builder'><div className="btn btn-dark ">Portfolio Maker</div></NavLink> */}
                             <div className="btn btn-dark" onClick={logout} color='red'><ExitToAppIcon color='red'/></div>
                             </div>
                             </>:

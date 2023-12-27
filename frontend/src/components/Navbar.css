@@ -29,12 +29,13 @@
         font-size: 20px;
 } */
 .gradient-background {
-  font-size: 20px;
-  font-weight: bold;
-  background: linear-gradient(to right, #ff8a00, #e52e71);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-size: 10px;
+  font-weight:lighter;
+  /* background: linear-gradient(to right, #ff8a00, #e52e71); */
+  color: #000;
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
+  /* color: transparent; */
   animation: textclip 2s infinite;
   transition: background-color 0.3s ease; /* Added transition property for smoother effect */
 }
@@ -46,7 +47,7 @@
 }
 
 .gradient-background:hover {
-  background-color: #e6e6e6; /* Change the background color on hover */
+  color: rgb(133, 224, 255); /* Change the background color on hover */
 }
 
 .comic-button {

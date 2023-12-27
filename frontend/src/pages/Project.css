@@ -1,7 +1,9 @@
 .search-wrapper{
     padding: 3px;
-    width: 100%;
+    width: 90%;
     margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
     align-items: center;
 }
 form{
@@ -106,6 +108,7 @@ form{
     .comic-button {
       display: inline-block;
       padding: 10px 20px;
+      margin: 7px;
       font-size: 20px;
       font-weight: bold;
       text-align: center;
