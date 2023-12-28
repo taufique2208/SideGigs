@@ -73,7 +73,7 @@ localStorage.removeItem('user');
         { title: "Projects", path: '/projects', isDrapdown: false, navs: dropdownNavs },
         // { title: "Messages", path: '/inbox', isDrapdown: false },
         { title: "My Projects", path: '/dashboard', isDrapdown: false },
-        { title: "Resume Builder", path: '/dresume-builder', isDrapdown: false },
+        { title: "Resume Builder", path: '/resume-builder', isDrapdown: false },
         { title: "Ask AI", path: '/ask-ai', isDrapdown: false },
         { title: "Learn", path: '/courses', isDrapdown: false },
     ]

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'
 import {MainContainer, ChatContainer, MessageList,Message,MessageInput,TypingIndicator} from '@chatscope/chat-ui-kit-react'
 // import { Directions } from '@mui/icons-material'
-const API_KEY='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';
+const API_KEY='';
 
 
 
@@ -12,6 +12,7 @@ function AskAi() {
         {
             message:'Hello! Welcome to SideGigs. How may I assist you today?',
             sender:'ChatGPT',
+            
 
         }
     ])

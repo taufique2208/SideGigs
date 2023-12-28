@@ -17,8 +17,8 @@ const ChatWindow = ({ onClose }) => {
   return (
     <div className="chat-window" onClick={(event) => event.stopPropagation()}>
       <div className="header">
-        <span>Conversation with EpicBot</span>
-        <button onClick={onClose}>Close</button>
+        <span style={{color:'black'}}>GigBot</span>
+        <button onClick={onClose}>Exit</button>
       </div>
       <div className="chat-content" ref={chatContentRef}>
         <div className="botmessage">Hi there! I'm EpicBot, your personal assistant for Epicmploy.</div>
